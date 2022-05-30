@@ -1,0 +1,40 @@
+{% extends 'store/navbar.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .img {
+      width:250px;
+      height:320px;
+      border:solid #fff;
+      box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
+    }
+  </style>
+
+
+    <h1>{{category_name.name}}</h1>
+
+    <div class="row products-slick" data-nav="#slick-nav-1">
+        {% for item in productss %}
+
+        <div style="margin-left:1%;" class="card-deck">
+            <div class="">
+                <img src="{{item.image_main.url}}" class="card-img-top img" alt="...">
+                <div class="card-body">
+                    <h3 class="product-name">{{item.name}}</h3>
+                <p style="float:left;" class="card-text">{{item.description}}</p>
+                <p style="float:left;font-size:25px;font-weight:bold;" class="card-text">${{item.price}}</p>
+                <a style="float:right;" class="btn btn-warning btn-sm" href="{% url 'productview' item.category.slug item.slug %}">View product</a>  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+  <div id="slick-nav-1" class="products-slick-nav"></div>
+{% endblock content %}
+
+

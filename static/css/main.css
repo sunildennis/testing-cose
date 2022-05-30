@@ -1,0 +1,207 @@
+body{
+	background-color: hsl(0, 0%, 98%);
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+.bg-dark{
+	background-color: #4f868c!important;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+	font-size: 14px;
+}
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+}
+
+.btn{
+	border-radius: 0;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+
+.hidden{
+	display: none!important;
+}
+
+
+.row {
+	display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+	flex: 33.33%;
+	padding: 0x;
+  }
+
+/* 
+newsletter */
+
+.subscription.bg-white {
+	background: none
+}
+
+.bg-white {
+	background-color: #fff !important
+}
+
+.subscription.bg-white .subscription-wrapper {
+	background: #fff
+}
+
+.subscription-wrapper {
+	border-radius: 0% 5% 10% 3%/10% 20% 0% 17%;
+	-webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
+	transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
+	padding: 70px 50px;
+	z-index: 1;
+	width: 100%;
+	background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+	position: absolute;
+	top: 100px
+}
+
+.subscription-wrapper {
+	box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important
+}
+
+.subscription-content {
+	-webkit-transform: skewY(-1deg);
+	transform: skewY(-1deg)
+}
+
+h3,
+.h3 {
+	font-size: 30px
+}
+
+.flex-fill {
+	-ms-flex: 1 1 auto !important;
+	flex: 1 1 auto !important
+}
+
+.subscription.bg-white .form-control {
+	border: 1px solid #ebebeb !important
+}
+
+.subscription-wrapper .form-control {
+	height: 60px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 45px
+}
+
+.subscription-wrapper .form-control:focus {
+	background: rgba(255, 255, 255, 0.1);
+	outline: 0;
+	box-shadow: none
+}
+
+.btn:not(:disabled):not(.disabled) {
+	cursor: pointer
+}
+
+.btn-primary {
+	border: 0;
+	color: #fff
+}
+
+.btn {
+	font-size: 16px;
+	font-family: "Poppins", sans-serif;
+	text-transform: capitalize;
+	padding: 18px 45px;
+	border-radius: 45px;
+	font-weight: 500;
+	border: 1px solid;
+	position: relative;
+	z-index: 1;
+	transition: .3s ease-in;
+	overflow: hidden
+}
+
+.btn-primary:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 102%;
+	height: 100%;
+	background: linear-gradient(45deg, #00a8f4 0%, #02d1a1 100%);
+	z-index: -1;
+	transition: ease 0.3s
+}

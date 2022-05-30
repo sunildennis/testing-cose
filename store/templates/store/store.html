@@ -1,0 +1,74 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<div style="margin-left:0%;margin-top:5%;">
+	<a href="{% url 'store' %}" type="button" class="btn btn-light ml">All</a>
+
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Products
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			{% for product in producty_name%}
+			
+			{% comment %} <a href="{% url 'store' %}?q={{product.name}}">{{product.name}}</a> {% endcomment %}
+			{% comment %} <a href="{% url 'store' %}?q={{product.name}}" type="button" class="btn btn-light ml">{{product.name}}</a>	 {% endcomment %}
+
+			<li><a class="dropdown-item" href="{% url 'store' %}?q={{product.name}}">{{product.name}}</a></li>
+		{% endfor %}
+		</div>
+	  </div>
+</div>
+
+<div class="row products-slick" data-nav="#slick-nav-1">
+	
+		{% for product in products %}
+							<!-- product -->
+						
+							<div class=" row product">
+								<div class="product-img">
+									<img src="{{product.imageURL}}" alt="">
+									<div class="product-label">
+										<span class="sale">-30%</span>
+										<span class="new">NEW</span>
+									</div>
+								</div>
+								<div class="product-body">
+									<p class="product-category">Category</p>
+									<h3 class="product-name">{{product.name}}</h3>
+									<h4 class="product-price">${{product.price}} <del class="product-old-price">${{product.price}}</del></h4>
+									<div class="product-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									
+									<a type="button" class="btn btn-secondary" href="{% url 'collectionsview' product.slug %}" >View</a>
+									<a type="button" class="btn btn-secondary" data-product="{{product.id}}" data-action="add" class="add-to-cart-btn add-btn update-wishlist"  href="{% url 'wishlist' %}">Wishlist</a>
+									<div class="product-btns">
+										
+										{% comment %} <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button> {% endcomment %}
+										<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+										<button data-product="" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+									</div>
+								</div>
+							
+								<div class="add-to-cart">
+									<button data-product="{{product.id}}" data-action="add" class="add-to-cart-btn add-btn update-cart"><i class="fa fa-shopping-cart"></i> add to cart</button>
+								</div>
+							</div>
+						
+		{% endfor %}
+
+	</div>
+	
+	<div id="slick-nav-1" class="products-slick-nav">
+
+	</div>
+
+
+{% endblock content %}

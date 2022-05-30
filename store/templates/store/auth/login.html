@@ -1,0 +1,25 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+
+        <label for="">Username: </label>
+        <input type="text" name="name" class="form-control" placeholder="Username">
+
+
+    </div>
+    <div class="form-group">
+
+        <label for="">Password: </label>
+        <input type="password" name="password" class="form-control" placeholder="Password">
+
+
+    </div>
+
+        <button type="submit" class="btn float-end shadow btn-success px-4">Login</button>
+</form>
+{% endblock %}
